@@ -7,14 +7,12 @@ class Formatter {
   }
   static titleize(string){
     const words = string.toLowerCase().split(" ");
-    let newWords = words.map(word => {
+    let words2 = words.map(word => {
       if ( word !== 'the' && word !== 'a' && word !== 'an' && word !== 'but'  && word !== 'of' && word !== 'and' && word !== 'for' && word !== 'at' && word !== 'by' && word !== 'from'){
         return word[0].toUpperCase() + word.slice(1)
-      } else {
-        return word
-      }
+      } else return word
     }).join(" ")
-    return newWords[0].toUpperCase() + newWords.slice(1)
+    return words2[0].toUpperCase() + words2.slice(1)
   }
 }
 
